@@ -2,7 +2,7 @@
 //  ToDoAppApp.swift
 //  ToDoApp
 //
-//  Created by Treinetic on 2024-12-09.
+//  Created by Madura Dias on 2024-12-09.
 //
 
 import FirebaseCore
@@ -16,7 +16,7 @@ struct ToDoAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
