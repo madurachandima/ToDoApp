@@ -28,10 +28,14 @@ struct RegisterView: View {
                     
                     TextField("Name",text: $name)
                         .textFieldStyle(DefaultTextFieldStyle())
+                        .autocorrectionDisabled()
+                    
                         .padding(10)
                     
                     TextField("Email Address",text: $email)
                         .textFieldStyle(DefaultTextFieldStyle())
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
                         .padding(10)
                     
                     SecureField("Create Password",text: $password)
@@ -39,19 +43,11 @@ struct RegisterView: View {
                         .padding(10)
                     
                     
-                    
-                    Button {
-                        
-                    } label: {
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.green)
+                    TLButton(
+                        buttonText: "Create Account",
+                        buttonColor: .green){
                             
-                            Text("Create Account")
-                                .foregroundColor(.white)
-                                .bold()
                         }
-                    }.padding()
                     
                 }
                 Spacer()
